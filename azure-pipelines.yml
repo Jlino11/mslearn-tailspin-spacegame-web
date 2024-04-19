@@ -1,8 +1,12 @@
-trigger: none
+trigger:
+- main
 
 pool:
   name: local
 
-steps: 
-- script: echo Hello, world! 
-  displayName: 'Run a one-line script' 
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: 'dotnet build $(buildConfiguration)'
