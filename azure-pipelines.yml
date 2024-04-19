@@ -15,11 +15,8 @@ steps:
     version: '6.x'
 
 - task: Npm@1
-  displayName: 'Install Gulp CLI Globally'
+  displayName: 'Run npm install'
   inputs:
-    command: custom
-    customCommand: 'install -g gulp-cli'
-    workingDir: '$(Build.SourcesDirectory)'
     verbose: false
 
 - script: './node_modules/.bin/node-sass Tailspin.SpaceGame.Web/wwwroot --output Tailspin.SpaceGame.Web/wwwroot'
