@@ -2,11 +2,8 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: local
 
-variables:
-  buildConfiguration: 'Release'
-
-steps:
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+steps: 
+- script: echo Hello, world! 
+  displayName: 'Run a one-line script' 
